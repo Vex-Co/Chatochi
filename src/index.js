@@ -1,5 +1,5 @@
-const server = require('./app')
+const httpServer = require('./app')
 
-server.listen(process.env.PORT, () => {
+httpServer.listen(process.env.PORT, () => {
     console.log('Listening on port ', process.env.PORT)
 })

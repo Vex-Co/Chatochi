@@ -1,11 +1,11 @@
 const express = require('express')
 const path = require('path')
-const http = require('http')
-const socketio = require('socket.io')
+const { createServer } = require('http')
+const { Server } = require('socket.io')
 
 const app = express()
-const server = http.createServer(app)
-const io = socketio(server)
+const httpServer = createServer(app)
+const io = new Server(httpServer)
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname,'views'));
@@ -20,4 +20,4 @@ io.on('connection', () => {
     console.log('New WebSocket connection')
 })
 
-module.exports = server
+module.exports = httpServer
