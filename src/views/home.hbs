@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
     <title>Chatochi</title>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/js/chat.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/js/chat.js" defer></script>
 </head>
 <body>
-    <h1>Chat App</h1>
+    <form id="message-form">
+        <h1>Chatochi</h1>
+        <input type="text" id="text-field" placeholder="Type Your Message...">
+        <input type="button" value="Send" id="send-btn">
+    </form>
+    <div id="display-messages">
+     </div>
 </body>
 </html>

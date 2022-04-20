@@ -14,10 +14,15 @@ app.use(express.static('public'))
 app.get('', (req, res) => {
     res.render('home')
 })
-
+let count = 0
 // IO
-io.on('connection', () => {
+io.on('connection', (socket) => {
     console.log('New WebSocket connection')
+
+    socket.on('message', (message) => {
+        if (message)
+            io.emit('message', message)
+    })
 })
 
 module.exports = httpServer

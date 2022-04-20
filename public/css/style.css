@@ -1,0 +1,32 @@
+#message-form {
+    margin: auto;
+    text-align: center;
+    margin-top: 12rem;
+}
+#text-field {
+    font-size: 2rem;
+    padding: 15px;
+}
+#send-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 40px;
+    font-size: 1.5rem;
+    background-color: aquamarine;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+#display-messages {
+    position: absolute;
+    top: 7rem;
+    right: 7rem;
+}
+#display-messages span {
+    display: block;
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+#display-messages span::before {
+    content: '> ';
+}
