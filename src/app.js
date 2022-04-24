@@ -18,11 +18,16 @@ let count = 0
 // IO
 io.on('connection', (socket) => {
     console.log('New WebSocket connection')
+    socket.broadcast.emit('message', "A new user joined!")
 
     socket.on('message', (message) => {
         if (message)
             io.emit('message', message)
     })
+    socket.on('disconnect', () => {
+        io.emit('message', 'A User left')
+    })
+
 })
 
 module.exports = httpServer
