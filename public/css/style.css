@@ -7,7 +7,7 @@
     font-size: 2rem;
     padding: 15px;
 }
-#send-btn {
+.btn{
     display: block;
     margin: 30px auto;
     padding: 10px 40px;
